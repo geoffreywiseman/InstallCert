@@ -1,20 +1,6 @@
 package com.codiform.cert;
 /**
- * This is my own fork of the InstallCert program originally published by
- * Sun Microsystems here:
- *   http://blogs.sun.com/andreas/resource/InstallCert.java
- * 
- * And then republished and modified here:
- *   https://github.com/escline/InstallCert
- * 
- * The license for that original code follows below.  I wanted to
- * examine the code as I went and make a few modifications, so I forked it,
- * and made some modifications.
- */
-
-/**
- * Class used to add the server's certificate to the KeyStore with your trusted
- * certificates.
+ * Command-line interface for the InstallCertCommand.
  */
 public class InstallCert {
 

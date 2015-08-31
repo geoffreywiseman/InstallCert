@@ -17,6 +17,10 @@ https://github.com/escline/InstallCert
 And forked it, to verify and understand its contents, and in so doing make some relatively minor 
 changes and refactorings (mostly extracting classes and methods, and using Maven).
 
+## License
+
+The original license terms can be found in the attached [LICENSE file](LICENSE).
+
 ## Usage
 
 Build this in Maven:
