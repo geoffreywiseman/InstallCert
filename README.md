@@ -25,15 +25,25 @@ Build this in Maven:
 Then, run the jar:
 `java -jar target/installcert.jar <host[:port]>`
 
-# And then?
+## And then?
 
-What you do after that depends on your reason for grabbing this certificate. You might:
+What you do after that depends on your reason for grabbing this certificate. You might do some of the following items.
 
-Change the alias of the captured certificate:
-`keytool -changealias -alias <generated alias> -destalias <new alias> -keystore jssecacerts -storepass changeit -v 
+### Change the Alias
+InstallCert will generate an alias for the certificate, but it might not be what you wanted. You can change the alias of the captured certificate:
+```
+keytool -changealias -alias <generated alias> -destalias <new alias> -keystore jssecacerts -storepass changeit -v 
+```
 
-Extract certificate from created jssecacerts keystore:
-`keytool -exportcert -alias <alias> -keystore jssecacerts -storepass changeit -file [host].cer`
+### Export Certificate
+You can extract the captured certificate from created jssecacerts keystore:
+```
+keytool -exportcert -alias <alias> -keystore jssecacerts -storepass changeit -file [host].cer
+```
 
-Import certificate into system keystore
-`keytool -importcert -alias [host] -keystore [path to system keystore] -storepass changeit -file [host].cer`
+### Import Certificate
+Import the exported certificate into system keystore (cacerts):
+```
+keytool -importcert -alias [host] -keystore [path to system keystore] -storepass changeit -file [host].cer
+```
+
